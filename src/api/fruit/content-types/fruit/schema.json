@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "fruits",
+  "info": {
+    "singularName": "fruit",
+    "pluralName": "fruits",
+    "displayName": "Fruits",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "cover": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "body": {
+      "type": "richtext"
+    },
+    "how_to_choose": {
+      "type": "richtext"
+    },
+    "bg_color": {
+      "type": "string",
+      "minLength": 4,
+      "maxLength": 7
+    },
+    "uses_of_fruit": {
+      "type": "richtext"
+    },
+    "benefits": {
+      "type": "richtext"
+    }
+  }
+}
