@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "recipes",
+  "info": {
+    "singularName": "recipe",
+    "pluralName": "recipes",
+    "displayName": "Recipe",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "minLength": 4,
+      "default": "Recipe Title Here"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "recipe_categories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::recipe-category.recipe-category",
+      "mappedBy": "recipe"
+    },
+    "time_cooking": {
+      "type": "integer",
+      "required": false,
+      "default": 15
+    }
+  }
+}

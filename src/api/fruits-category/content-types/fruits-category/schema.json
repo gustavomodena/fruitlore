@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "fruits_categories",
+  "info": {
+    "singularName": "fruits-category",
+    "pluralName": "fruits-categories",
+    "displayName": "Fruits Categories"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "fruit": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::fruit.fruit",
+      "inversedBy": "fruits_categories"
+    }
+  }
+}

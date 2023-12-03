@@ -4,7 +4,7 @@
   "info": {
     "singularName": "fruit",
     "pluralName": "fruits",
-    "displayName": "Fruits",
+    "displayName": "Fruit",
     "description": ""
   },
   "options": {
@@ -31,16 +31,22 @@
     "how_to_choose": {
       "type": "richtext"
     },
-    "bg_color": {
-      "type": "string",
-      "minLength": 4,
-      "maxLength": 7
-    },
     "uses_of_fruit": {
       "type": "richtext"
     },
     "benefits": {
       "type": "richtext"
+    },
+    "fruits_categories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::fruits-category.fruits-category",
+      "mappedBy": "fruit"
+    },
+    "bg_color": {
+      "type": "customField",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
+      "customField": "plugin::color-picker.color"
     }
   }
 }
